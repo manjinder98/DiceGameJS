@@ -72,8 +72,10 @@ function nextPlayer(){
 
 function init(){
     varCheck = prompt('Enter the winning score!');
-    if (varCheck == "" || varCheck == null || varCheck === '0' || typeof varCheck === 'undefined' || varCheck.indexOf(' ') >= 0 || Number.isInteger(varCheck) === false ){
+    if (varCheck == "" || varCheck == null || varCheck === '0' || typeof varCheck === 'undefined' || varCheck.indexOf(' ') >= 0){
         location.reload();
+    } else if (!Number.isInteger(varCheck)) {
+        console.log("It's not integer!");
     }
     winningScore = varCheck;
     /*varCheck = prompt('Enter the winning score!');
