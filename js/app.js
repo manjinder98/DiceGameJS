@@ -72,7 +72,7 @@ function nextPlayer(){
 
 function init(){
     varCheck = prompt('Enter the winning score!');
-    if (varCheck == "" || varCheck == null || varCheck === '0' || typeof varCheck === 'undefined' || varCheck.indexOf(' ') >= 0){
+    if (varCheck == "" || varCheck == null || varCheck === '0' || typeof varCheck === 'undefined' || varCheck.indexOf(' ') >= 0 || Number.isInteger(varCheck) === false ){
         location.reload();
     }
     winningScore = varCheck;
